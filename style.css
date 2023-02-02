@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  width: 100%;
+}
+
+.header-container h1 {
+  margin-bottom: 2rem;
+  color: hsl(209, 100%, 38%);
+}
+
+.add-todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#text {
+  padding: 0.25rem 0.5rem;
+  flex: 1;
+  font-size: 1rem;
+}
+
+input {
+  box-shadow: 0 20px 10px, black;
+}
+
+.btn-add {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid hsl(209, 100%, 38%);
+  background-color: hsl(209, 100%, 38%);
+  color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.edit {
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid hsl(209, 100%, 38%);
+  background-color: hsl(209, 100%, 38%);
+  color: white;
+}
+
+.delete {
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid hsl(0, 100%, 40%);
+  background-color: hsl(0, 100%, 40%);
+  color: white;
+}
+
+.todos {
+  text-align: left;
+  width: 100%;
+  flex: 3;
+}
+
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.todos-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 3s ease-in-out;
+}
+
+.todos ul {
+  list-style: none;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.animate {
+  animation: delete 3s ease-out;
+}
+
+@keyframes delete {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
